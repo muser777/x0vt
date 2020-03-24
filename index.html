@@ -43,11 +43,20 @@ z-index: 1;
     }    
     </style>
 <body id="body"> 
-    <video id="idvideo"  controls controlsList="nodownload">
-        <source data-src="mov_bbb.ogg" type="video/mp4">
-    </video>
+   
+
+
+
+
+    <iframe id="idvideo" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
     <button id="idbtdescarga" >
-   queires ver más <br>   Descarga Valerianx</a></button>
+   queires ver más <br>   Descarga Valerianx</button>
 <script>
 
 var video;
@@ -64,11 +73,11 @@ function llamadoluego(stv){
 
 video= document.getElementById("idvideo");
 if(stv.ver=="mp4"){
-    
     video.src=stv.id;
 }
-if(stv.id=="iframe"){
-    video.src==stv.id;
+if(stv.ver=="iframe"){
+
+    video.src=stv.id;
 }
 
 
