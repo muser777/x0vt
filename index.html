@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <style>
+
+
+        #body{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black
+           
+}
+
+        #idbtdescarga{
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 120px;
+            height: 90px;
+            background-color: rgba(0, 0, 0, 0.096);
+            color:rgb(255, 255, 255);
+text-align: center;
+z-index: 3;
+        }
+        .external{
+            color:rgb(255, 255, 255);
+            font-size: 11px;
+        }
+
+    #idvideo{
+        position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(0, 0, 0);
+z-index: 1;  
+    }    
+    </style>
+<body id="body"> 
+    <video id="idvideo"  controls controlsList="nodownload">
+        <source data-src="mov_bbb.ogg" type="video/mp4">
+    </video>
+    <button id="idbtdescarga" >
+   queires ver más <br>   Descarga Valerianx</a></button>
+<script>
+
+var video;
+var butonxx;
+
+$(document).ready(function(){
+   
+    varporeso();
+ 
+
+});
+
+function llamadoluego(stv){
+
+video= document.getElementById("idvideo");
+if(stv.ver=="mp4"){
+    
+    video.src=stv.id;
+}
+if(stv.id=="iframe"){
+    video.src==stv.id;
+}
+
+
+$("#idbtdescarga").click(function(){
+    
+      url = "https://play.google.com/store/apps/details?id=com.esotam.Valerianx&hl=es_CO";
+      window.open(url, '_blank');
+      return false;
+ 
+});
+}
+
+function varporeso(){
+
+
+    $.get("esojson.json", function(datasss, status){
+
+    llamadoluego(datasss);
+  
+  });
+}
+</script>
+
+</body> 
+</html>
